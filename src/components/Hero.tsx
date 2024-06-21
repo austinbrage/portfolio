@@ -1,6 +1,6 @@
 import anime from 'animejs'
 import { useEffect } from 'react'
-import bgVideo from '../assets/background-video.mp4'
+import bgVideo from '/background-video.mp4'
 
 // const elementsArray = Array.from({ length: 24 }, (_, index) => index + 1)
 
