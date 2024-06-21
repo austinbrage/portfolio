@@ -1,9 +1,6 @@
-import anime from 'animejs'
-import { useEffect } from 'react'
-import bgVideo from '/background-video.mp4'
+import { Link } from 'react-router-dom' 
 import { FaCopy } from "react-icons/fa"
-
-// const elementsArray = Array.from({ length: 24 }, (_, index) => index + 1)
+import bgVideo from '/background-video.mp4'
 
 export function HomePage() {
 
@@ -11,32 +8,20 @@ export function HomePage() {
         navigator.clipboard.writeText(email)
     }
 
-    useEffect(() => {
-        anime({
-            targets: '.staggering-grid-demo .el',
-            scale: [
-                { value: 0.1, easing: 'easeOutSine', duration: 700 },
-                { value: 1, easing: 'easeInOutQuad', duration: 1400 }
-            ],
-            delay: anime.stagger(400, { grid: [8, 3], from: 'center' }),
-            loop: true
-        })
-    }, [])
-
     return(
         <section className='min-h-screen'>
 
             <nav className='flex align-center justify-end pt-8 pe-10 w-full max-w-full'>
                 <div className='flex align-center justify-between w-1/4'>
                     <p className='text-2xl tracking-wider font-bold transition-all duration-500 scale-100 text-slate-200 hover:tracking-widest'>
-                        <a href="#home" className=''>
+                        <Link to='/'>
                             Home
-                        </a>
+                        </Link>
                     </p>               
                     <p className='text-2xl tracking-wider font-bold transition-all duration-500 scale-100 text-slate-200 hover:tracking-widest'>
-                        <a href="#projects" className=''>
+                        <Link to='/projects'>
                             Projects
-                        </a>
+                        </Link>
                     </p>               
                     <p className='text-2xl tracking-wider font-bold transition-all duration-500 scale-100 text-slate-200 hover:tracking-widest'>
                         <a href="#about" className=''>
@@ -51,19 +36,6 @@ export function HomePage() {
                     <source src={bgVideo} type='video/mp4'/>
                 </video>
             </div>
-
-            {/* <div className='staggering-grid-demo absolute top-0 right-20 flex flex-col justify-center align-center text-center h-full w-[290px] z-10'>
-                <div className='flex flex-wrap gap-2 opacity-80'>
-                    {elementsArray.map((_, index) => ( 
-                        <div key={index} className='el w-7 h-7 relative pointer-events-none rounded-3xl bg-gray-50'></div>
-                    ))}
-                </div>
-                <div className='flex flex-wrap gap-2 absolute opacity-20'>
-                    {elementsArray.map((_, index) => ( 
-                        <div key={index} className='el w-7 h-7 relative pointer-events-none rounded-3xl bg-white'></div>
-                    ))}
-                </div>
-            </div> */}
 
             <div className='relative -top-5 ms-5 px-5 py-3 italic tracking-widest font-semibold rounded-lg w-max text-white bg-slate-800'>
                 <div className='flex items-center justify-center gap-2'>
