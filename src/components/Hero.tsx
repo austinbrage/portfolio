@@ -1,10 +1,15 @@
 import anime from 'animejs'
 import { useEffect } from 'react'
 import bgVideo from '/background-video.mp4'
+import { FaCopy } from "react-icons/fa"
 
 // const elementsArray = Array.from({ length: 24 }, (_, index) => index + 1)
 
 export function HeroSection() {
+
+    const handleClipboard = (email: string) => {
+        navigator.clipboard.writeText(email)
+    }
 
     useEffect(() => {
         anime({
@@ -21,7 +26,7 @@ export function HeroSection() {
     return(
         <section className='min-h-screen'>
 
-            <nav className='flex align-center justify-center pt-5 w-full max-w-full'>
+            <nav className='flex align-center justify-end pt-5 pe-10 w-full max-w-full'>
                 <div className='flex align-center justify-between w-1/4'>
                     <p className='text-2xl tracking-wider font-bold transition-all duration-500 scale-100 text-slate-200 hover:tracking-widest'>
                         <a href="#home" className=''>
@@ -59,6 +64,18 @@ export function HeroSection() {
                     ))}
                 </div>
             </div> */}
+
+            <div className='relative -top-5 ms-5 px-5 py-3 italic tracking-widest font-semibold rounded-lg w-max text-white bg-slate-800'>
+                <div className='flex items-center justify-center gap-2'>
+                    <p>agustinbrage19@gmail.com</p>
+                    <span 
+                        onClick={() => handleClipboard('agustinbrage19@gmail.com')}
+                        className='p-2 rounded-md text-sm opacity-90 cursor-pointer hover:bg-slate-200 hover:text-slate-800'
+                    >
+                        <FaCopy/>
+                    </span>
+                </div>
+            </div>
 
             <div className='flex flex-col gap-2 ps-10 absolute top-[30%] text-white'>
                 {/* <h1 className='text-2xl'>Hey, I'm Austin 👋🏻</h1> */}
