@@ -1,7 +1,15 @@
-.font-poetsen {
-    font-family: "Poetsen One", sans-serif;
+.font-inter {
+    font-family: "Inter", sans-serif;
+}
+
+.font-inika {
+    font-family: "Inika", serif;
 }
 
 .font-kanit {
     font-family: "Kanit", sans-serif;
+}
+
+.font-poetsen {
+    font-family: "Poetsen One", sans-serif;
 }
