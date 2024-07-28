@@ -1,65 +1,20 @@
-import { Link } from 'react-router-dom' 
-import { FaCopy } from "react-icons/fa"
-import bgVideo from '/background-video.mp4'
+import fakeResume from '/fake_resume.png'
+import { FaDownload } from "react-icons/fa"
 
 export function HomePage() {
 
-    const handleClipboard = (email: string) => {
-        navigator.clipboard.writeText(email)
-    }
-
     return(
-        <section className='min-h-screen'>
-
-            <nav className='flex align-center justify-end pt-8 pe-10 w-full max-w-full'>
-                <div className='flex align-center justify-between w-1/4'>
-                    <p className='text-2xl tracking-wider font-bold transition-all duration-500 scale-100 text-slate-200 hover:tracking-widest'>
-                        <Link to='/'>
-                            Home
-                        </Link>
-                    </p>               
-                    <p className='text-2xl tracking-wider font-bold transition-all duration-500 scale-100 text-slate-200 hover:tracking-widest'>
-                        <Link to='/projects'>
-                            Projects
-                        </Link>
-                    </p>               
-                    <p className='text-2xl tracking-wider font-bold transition-all duration-500 scale-100 text-slate-200 hover:tracking-widest'>
-                        <a href="#about" className=''>
-                            About
-                        </a>
-                    </p>    
-                </div>
-            </nav>
-
-            <div className='fixed top-0 left-0 w-full h-full overflow-hidden -z-10 bg-slate-700'>
-                <video autoPlay muted loop className='w-full h-full object-cover'>
-                    <source src={bgVideo} type='video/mp4'/>
-                </video>
-            </div>
-
-            <div className='relative -top-5 ms-5 px-5 py-3 italic tracking-widest font-semibold rounded-lg w-max text-white bg-slate-800'>
-                <div className='flex items-center justify-center gap-2'>
-                    <p>agustinbrage19@gmail.com</p>
-                    <span 
-                        onClick={() => handleClipboard('agustinbrage19@gmail.com')}
-                        className='p-2 rounded-md text-sm opacity-90 cursor-pointer hover:bg-slate-200 hover:text-slate-800'
-                    >
-                        <FaCopy/>
-                    </span>
-                </div>
-            </div>
-
+        <section id="home" className='min-h-screen'>
             <div className='flex flex-col gap-2 ps-10 absolute top-[30%] text-white'>
-                {/* <h1 className='text-2xl'>Hey, I'm Austin 👋🏻</h1> */}
-                <h2 className='text-[5.2rem] leading-[5rem] tracking-widest font-bold font-poetsen'>
+                <h1 className='text-[5.2rem] leading-[5rem] tracking-widest font-bold font-poetsen'>
                     <span className='text-slate-400'>Web </span>
                     <span>Developer</span>
-                </h2>
+                </h1>
                 <p className='mt-2 tracking-wide text-xl'>
                     Hey, I'm Austin 👋🏻 a web developer based in Buenos Aires
                 </p>
                 <p className='mt-0 mb-3 italic tracking-wider text-xl'>
-                    Currently looking for a team position on a company
+                    Specialized in the react and node ecosystem
                 </p>
                 <div className='flex items-center justify-start gap-2 w-full'>
                     <a href="https://brage.pages.dev" target="_blank" className="flex items-center bg-indigo-600 text-white w-max px-6 py-3 font-semibold text-md leading-5 rounded-lg gap-3 border-none cursor-pointer transition ease-in-out duration-600 hover:scale-95"> 
@@ -73,8 +28,27 @@ export function HomePage() {
                         See me on Github 
                     </a>
                 </div>
+                <div className='mt-40 font-bold text-lg tracking-wider font-kanit text-[#B2ADAD]'>
+                    <p>Currently available to work</p>
+                </div>
             </div>
-
+            <div className='absolute top-32 right-20 w-96 rounded-md group bg-gray-800'>
+                <img 
+                    className='opacity-90 rounded-md group-hover:opacity-40' 
+                    src={fakeResume} 
+                    alt="resume" 
+                />
+                <a 
+                    href='/fake_resume.png'
+                    download="austinbrage.png"
+                    className='flex items-center justify-center gap-2 absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 w-36 py-2 px-5 rounded-xl text-center font-kanit tracking-wider border-2 text-white bg-gray-800 border-gray-500 cursor-pointer opacity-0 group-hover:opacity-100'
+                >
+                    <p>Download</p>
+                    <span>
+                        <FaDownload/>
+                    </span>
+                </a>
+            </div>
         </section>
     )
 }

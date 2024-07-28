@@ -1,20 +1,17 @@
+import { Layout } from './components/Layout'
 import { HomePage } from './pages/Home'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { AboutPage } from './pages/About'
+import { ProjectsPage } from './pages/Projects'
 import './App.css'
-
-const routes = createBrowserRouter([
-  {
-    path: '/',
-    element: <HomePage/>  
-  }
-])
 
 function App() {
 
   return (
-    <>
-      <RouterProvider router={routes}/>
-    </>
+    <Layout>
+      <HomePage/>
+      <AboutPage/>
+      <ProjectsPage/>
+    </Layout>
   )
 }
 
