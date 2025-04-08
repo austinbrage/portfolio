@@ -1,3 +1,4 @@
+import { toast } from "sonner"
 import { FaCopy } from "react-icons/fa"
 import { type ReactNode } from 'react'
 
@@ -15,7 +16,10 @@ export function Layout({ children }: { children: ReactNode }) {
                     <div className='flex items-center justify-center gap-2'>
                         <p>agustinbrage19@gmail.com</p>
                         <span 
-                            onClick={() => handleClipboard('agustinbrage19@gmail.com')}
+                            onClick={() => {
+                                handleClipboard('agustinbrage19@gmail.com')
+                                toast.success('Email copied, feel free to contact me!')
+                            }}
                             className='p-2 rounded-md text-sm opacity-90 cursor-pointer hover:bg-slate-200 hover:text-slate-800'
                         >
                             <FaCopy/>
