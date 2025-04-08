@@ -1,6 +1,7 @@
 import { toast } from "sonner"
 import { FaCopy } from "react-icons/fa"
 import { type ReactNode } from 'react'
+import linkedinLogo from '/linkedin_logo.png'
 
 export function Layout({ children }: { children: ReactNode }) {
 
@@ -52,6 +53,15 @@ export function Layout({ children }: { children: ReactNode }) {
                 <video autoPlay muted loop className='w-full h-full object-cover'>
                     <source src='https://assets.austinbrage.me/background-video.mp4' type='video/mp4'/>
                 </video>
+            </div>
+
+            <div className='fixed bottom-10 right-3 z-50'>
+                <img 
+                    src={linkedinLogo} 
+                    alt="Linkedin logo" 
+                    className="w-[50px] cursor-pointer opacity-50"
+                    onClick={() => window.open('https://www.linkedin.com/in/agustin-brage-46946a149/')}
+                />
             </div>
 
             <main>
