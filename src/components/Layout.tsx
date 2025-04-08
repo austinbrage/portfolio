@@ -1,5 +1,4 @@
 import { FaCopy } from "react-icons/fa"
-import bgVideo from '/background-video.mp4'
 import { type ReactNode } from 'react'
 
 export function Layout({ children }: { children: ReactNode }) {
@@ -47,7 +46,7 @@ export function Layout({ children }: { children: ReactNode }) {
             
             <div className='fixed top-0 left-0 w-full h-full overflow-hidden -z-10 bg-slate-700'>
                 <video autoPlay muted loop className='w-full h-full object-cover'>
-                    <source src={bgVideo} type='video/mp4'/>
+                    <source src='https://assets.austinbrage.me/background-video.mp4' type='video/mp4'/>
                 </video>
             </div>
 
