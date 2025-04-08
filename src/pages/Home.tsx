@@ -17,7 +17,7 @@ export function HomePage() {
                     Specialized in the react and node ecosystem
                 </p>
                 <div className='flex items-center justify-start gap-2 w-full'>
-                    <a href="https://brage.pages.dev" target="_blank" className="flex items-center bg-indigo-600 text-white w-max px-6 py-3 font-semibold text-md leading-5 rounded-lg gap-3 border-none cursor-pointer transition ease-in-out duration-600 hover:scale-95"> 
+                    <a href="https://brage.app" target="_blank" className="flex items-center bg-indigo-600 text-white w-max px-6 py-3 font-semibold text-md leading-5 rounded-lg gap-3 border-none cursor-pointer transition ease-in-out duration-600 hover:scale-95"> 
                         Get my 
                         <span className='italic font-bold'>
                             SOFTWARE
