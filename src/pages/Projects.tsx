@@ -5,35 +5,48 @@ import webPageLogo from '../icons/general/webpage.svg'
 export function ProjectsPage() {
 
     return (    
-        <section id="projects" className="min-h-screen relative">
-            <div className="flex flex-col gap-16 px-10 w-full absolute top-[30%] text-white">
+        <section 
+            id="projects" 
+            className=" relative"
+            style={{ minHeight: 'calc(250vh + 10rem)' }}
+        >
+            <div className="flex flex-col gap-16 px-10 w-full absolute top-[10%] text-white">
                 <h2 className="text-[5.2rem] leading-[2rem] tracking-widest font-bold font-poetsen">
                     <span className="text-slate-400">Projects</span>
                 </h2>
                 <div>
                     <p className="flex flex-col tracking-wide text-lg font-bold font-inter text-[#bcb5b5]">
                         <span>
-                            Two Saas deployed and one 
+                            Two Products deployed and one 
                         </span>
                         <span>
-                            Freelance job done so far
+                            SaaS on development so far
                         </span>
                     </p>
                 </div>
             </div>
             <div className='absolute right-10 top-44 flex flex-col gap-10 w-full items-end justify-center'>
                 {projects.map(project => (
-                    <div className='w-[780px] h-[400px] bg-[rgba(36,41,56,0.85)]'>
-                        <a 
-                            target='_blank'
-                            href={project.link}
-                            className="w-[160px] h-[40px] bg-[#191D24] absolute right-3 mt-3 rounded-sm flex items-center justify-around"
-                        >
-                            <img src={webPageLogo} alt="webpage logo" />
-                            <p className="tracking-wide font-bold font-inter text-white">
-                                landing page
-                            </p>                    
-                        </a>
+                    <div className='w-[780px] h-[500px] bg-[rgba(36,41,56,0.85)]'>
+                        {project.link ? (
+                            <a 
+                                target='_blank'
+                                href={project.link}
+                                className="w-[160px] h-[40px] bg-[#191D24] absolute right-3 mt-3 rounded-sm flex items-center justify-around"
+                            >
+                                <img src={webPageLogo} alt="webpage logo" />
+                                <p className="tracking-wide font-bold font-inter text-white">
+                                    landing page
+                                </p>                    
+                            </a>
+                        ) : (
+                            <a className="w-[180px] h-[40px] bg-[#191D24] absolute right-3 mt-3 rounded-sm flex items-center justify-around pointer-events-none">
+                                <img src={webPageLogo} alt="webpage logo" />
+                                <p className="tracking-wide font-bold font-inter text-white">
+                                    on development
+                                </p>                    
+                            </a>
+                        )}
                         <div className='p-3'>
                             <h4 className='tracking-wider font-bold font-inter text-xl text-white'>
                                 {project.name}
@@ -62,6 +75,24 @@ export function ProjectsPage() {
                                 ))}
                             </div>      
                         </div>
+                        {project.videoTitle ? (
+                            <div className='w-[400px] mt-10 ms-10'>
+                                <iframe 
+                                    className='w-full aspect-video'
+                                    src={project.videoSource}
+                                    title={project.videoTitle}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerPolicy="strict-origin-when-cross-origin" 
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        ) : (
+                            <div className='w-[400px] aspect-video mt-10 ms-10 grid place-items-center bg-slate-700'>
+                                <p className='text-xl text-slate-200'>
+                                    No video available
+                                </p>
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>
