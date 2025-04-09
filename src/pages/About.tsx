@@ -12,34 +12,24 @@ export function AboutPage() {
                 <div>
                     <p className="flex flex-col tracking-wide text-lg font-bold font-inter text-[#bcb5b5]">
                         <span>
-                            Previously a physics student at the UBA, who became
+                            Driven and self-taught developer with a background in electronics 
                         </span>
                         <span>
-                            fond of software development during the pandemic.
-                        </span>
-                    </p>
-                    <p className="mt-7 flex flex-col tracking-wider text-base font-bold font-inika text-[#e1dada]">
-                        <span>
-                            Decided to follow that path, initially working on
-                            <span className="text-[#B5A7A7]"> FRONTEND</span>
-                        </span>
-                        <span>
-                            projects, then on
-                            <span className="text-[#B5A7A7]"> BACKEND </span> 
-                            projects and currently  working on 
-                        </span>
-                        <span>
-                            strengthening my
-                            <span className="text-[#B5A7A7]"> DEVOPS </span>  
-                            knowledge.
+                            and a strong focus on backend tooling, automation, and infrastructure.
                         </span>
                     </p>
-                    <p className="mt-9 flex flex-col tracking-wider text-base font-bold font-kanit text-[#e1dada]">
+                    <p className="mt-12 flex flex-col tracking-wider text-base font-semibold font-inter text-[#e1dada]">
                         <span>
-                            Therefore, I stand out as a fullstack developer 
+                            I build practical solutions, from custom CLI tools to desktop apps for managing
                         </span>
                         <span>
-                            looking to be part of a team
+                            cloud infrastructure combining creativity with solid technical execution.
+                        </span>
+                        <span className="mt-5">
+                            I value clean code, autonomy, and continuous learning, and I'm looking to contribute
+                        </span>
+                        <span>
+                            to a team where I can solve real-world problems and grow as a software engineer.
                         </span>
                     </p>
                 </div>
