@@ -27,7 +27,10 @@ export function ProjectsPage() {
             </div>
             <div className='absolute right-10 top-44 flex flex-col gap-10 w-full items-end justify-center'>
                 {projects.map(project => (
-                    <div className='w-[780px] h-[500px] bg-[rgba(36,41,56,0.85)]'>
+                    <div 
+                        key={project.name}
+                        className='w-[780px] h-[500px] bg-[rgba(36,41,56,0.85)]'
+                    >
                         {project.link ? (
                             <a 
                                 target='_blank'
@@ -69,7 +72,10 @@ export function ProjectsPage() {
                             </div>
                             <div className='flex gap-6 items-center justify-center'>
                                 {project.stackIcons.map(icon => (
-                                    <span className='w-10 h-10'>
+                                    <span 
+                                        key={icon}
+                                        className='w-10 h-10'
+                                    >
                                         <img src={icon} alt="tech stack icon" />
                                     </span>
                                 ))}

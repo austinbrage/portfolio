@@ -46,7 +46,10 @@ export function Stacks() {
             </div>
             <div className='h-[276px] bg-[rgba(30,41,59,0.5)] grid grid-cols-3 place-content-around place-items-center'>
                 {techStacks[currentStack].map(elem => (
-                    <div className='flex gap-3 flex-col items-center justify-center'>
+                    <div 
+                        key={elem.name}
+                        className='flex gap-3 flex-col items-center justify-center'
+                    >
                         <img 
                             src={elem.logo} 
                             alt={`${elem.name} logo`} 
