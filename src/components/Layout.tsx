@@ -60,7 +60,7 @@ export function Layout({ children }: { children: ReactNode }) {
                     src={linkedinLogo} 
                     alt="Linkedin logo" 
                     className="w-[50px] cursor-pointer opacity-50"
-                    onClick={() => window.open('https://www.linkedin.com/in/agustin-brage-46946a149/')}
+                    onClick={() => window.open('https://www.linkedin.com/in/austinbrage')}
                 />
             </div>
 
